@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.2.3",
+    "nodemon": "^2.0.22",
+    "redis-server": "^1.2.2"
+  },
+  "name": "projeto-mongo-bd2",
+  "description": "As ferramentas utilizadas na construção desta API incluem o MongoDB e Mongoose.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leticiaesttrela/projeto-mongo-bd2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leticiaesttrela/projeto-mongo-bd2/issues"
+  },
+  "homepage": "https://github.com/leticiaesttrela/projeto-mongo-bd2#readme"
+}
