@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Maps</title>
+    <link rel="icon" href="/titulo.png">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+
+</head>
+
+<body>
+    <section class="container">
+        <div class="flex-container">
+            <div class="square">
+                <div id="map"></div>
+                <div id="form">
+                    <h1>Editar Eventos</h1>
+                    <form action="" method="post">
+                        <div>
+
+                            <input type="text" id="titulo" placeholder="Título:" required><br>
+
+                            <input type="descricao" id="descricao" placeholder="Descrição:" required><br>
+
+                            <input type="date" id="dataInicio" placeholder="Data de Início:" required><br>
+
+                            <input type="date" id="dataFim" placeholder="Data de Termino:" required><br>
+
+                        </div>
+                        <button type="button" onclick="editar()">Salvar</button></br>
+                        <button type="button-1" onclick="remover()">Remover</button>
+                    </form>
+                </div>
+            </div>
+</body>
+
+</html>
