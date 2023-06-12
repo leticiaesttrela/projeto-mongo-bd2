@@ -79,19 +79,27 @@ async function listar(maps) {
       marcar.forEach(marcar => {
         const li = document.createElement('li');
         const h3 = document.createElement('h3');
+        const pDataInicio = document.createElement('p');
+        const pDataFim = document.createElement('p');
         const p = document.createElement('p');
         const buttonEdit = document.createElement('button');
         const buttonDelet= document. createElement('button')
         ul.appendChild(li);
         li.appendChild(h3);
+        li.appendChild(pDataInicio);
+        li.appendChild(pDataFim);
         li.appendChild(p);
         li.appendChild(buttonEdit);
         li.appendChild(buttonDelet);
         h3.textContent = marcar.titulo;
-        p.textContent = marcar.descricao;
+        pDataInicio.textContent = `Inicio: ${marcar.dataInicio}`;
+        pDataFim.textContent = `Fim: ${marcar.dataFim}`;
+        p.textContent = `Descrição: ${marcar.descricao}`;
         buttonEdit.textContent = "Editar";
         buttonEdit.setAttribute('onclick', `window.location.assign('editar.html?id=${marcar._id}')`);
+        buttonDelet.setAttribute('id', 'button-del')
         buttonDelet.textContent = "Deletar";
+        buttonDelet.setAttribute('onclick', `deletar('${marcar._id}')`);
 
         const latLng = new maps.LatLng(
           marcar.lat,
@@ -119,7 +127,41 @@ async function listar(maps) {
 async function editar() {
   const url = new URLSearchParams(window.location.search);
   const id = url.get('id');
-  console.log(id)
+  
+  const obj = {
+    titulo: document.getElementById('titulo').value,
+    descricao: document.getElementById('descricao').value,
+    dataInicio: document.getElementById('dataInicio').value,
+    dataFim: document.getElementById('dataFim').value,
+    lat: marker.getPosition().lat(),
+    lng: marker.getPosition().lng()
+  };
+  await fetch(`http://localhost:3000/academicos/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(obj)
+  }).then(response => {
+    alert('Alterado com sucesso');
+    window.location.assign('/');
+  }).catch(error => alert('Falha ao alterar!'));
+}
+
+async function deletar(id) {
+
+  await fetch(`http://localhost:3000/academicos/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  }).then(response => {
+    alert('Evento removido!');
+    window.location.assign('/');
+  }).catch(error => alert('Falha ao remover!'));
+
 }
 
 window.initMap = initMap;
