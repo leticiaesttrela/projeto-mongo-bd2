@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Projeto Maps</title>
+  <link rel="icon" href="/titulo.png">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+</head>
+
+<body>
+
+  <input type="text" id="campoBusca" name="campoBusca" placeholder="Digite aqui sua busca">
+
+  <section class="container">
+
+    <div class="square">
+      <h1>Buscar</h1>
+      <p>Resultado por:</p>
+      <ul id="exibir"></ul>
+    </div>
+
+    <div class="flex-container">
+      <div class="square">
+        <div id="map"></div>
+  </section>
+</body>
+
+</html>
