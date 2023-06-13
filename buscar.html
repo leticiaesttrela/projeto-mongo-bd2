@@ -12,14 +12,17 @@
 
 <body>
 
-  <input type="text" id="campoBusca" name="campoBusca" placeholder="Digite aqui sua busca">
+  <div id="campoBusca">
+    <input type="text" id="input-buscar" name="input-buscar" placeholder="Digite aqui sua busca">
+    <button id="button-buscar" onclick="buscar()">Pesquisar</button>
+  </div>
 
   <section class="container">
 
     <div class="square">
       <h1>Buscar</h1>
-      <p>Resultado por:</p>
-      <ul id="exibir"></ul>
+      <ul id="exibir-resultados"">
+      </ul>
     </div>
 
     <div class="flex-container">

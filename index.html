@@ -11,7 +11,11 @@
 </head>
 
 <body>
-  <input type="text" id="campoBusca" name="campoBusca" placeholder="Digite aqui sua busca">
+  <div id="campoBusca">
+    <input type="text" id="input-buscar" name="input-buscar" placeholder="Digite aqui sua busca">
+    <button id="button-buscar" onclick="buscar()">Pesquisar</button>
+  </div>
+  
   <section class="container">
     <div class="flex-container">
       <div class="square">
@@ -30,12 +34,12 @@
               <input type="date" id="dataFim" placeholder="Data de Termino" required><br>
 
             </div>
-            <button type="button" onclick="salvar()">Cadastrar</button>
+            <button type="button" id="button-save" onclick="salvar()">Cadastrar</button>
           </form>
         </div>
       </div>
       <div class="square">
-        <h1>Evento Cadastrados</h1>
+        <h1>Eventos Cadastrados</h1>
         <ul id="exibir"></ul>
       </div>
   </section>

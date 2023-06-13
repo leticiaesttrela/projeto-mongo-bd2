@@ -8,22 +8,32 @@ body {
 }
 
 #campoBusca {
-  margin: 40px auto 0; 
-  width: 480px;
-  display: block;
-  padding: 10px;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 10vh;
   border-radius: 5px;
   border: none;
+ 
+}
+#campoBusca input{
+  max-width: 20vw;
+  margin: 0;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
+}
+#campoBusca button{
+  background-color: rgb(146, 121, 121);
+  margin-left: 5px;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .square {
@@ -32,23 +42,21 @@ body {
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.square h1{
+  margin: 0;
+  margin-top: 5px;
 }
 
 .square ul {
   overflow-y: auto;
-  width: 480px;
+  width: 450px;
 }
 
 #button-del {
-  margin-left: 10px;
-}
-
-#button-bus{
   margin-left: 10px;
 }
 
@@ -85,6 +93,9 @@ input {
   border-radius: 5px;
   border: none;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+#button-save{
+  margin-bottom: 5px;
 }
 
 button {
