@@ -1,0 +1,22 @@
+<body>
+    <h1>Formulário de Evento</h1>
+   
+    <form id="user-form" onsubmit="handleUserFormSubmit(event)">
+      <label for="username">Nome de Usuário:</label>
+      <input type="text" id="username" name="username" required />
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required />
+      <link rel="stylesheet" href="event.css">
+  
+      <button type="submit">Cadastrar Usuário</button>
+    </form>
+
+    <form id="login-form" onsubmit="handleLoginFormSubmit(event)">
+      <label for="login-username">Nome de Usuário:</label>
+      <input type="text" id="login-username" name="login-username" required />
+      <label for="login-password">Senha:</label>
+      <input type="password" id="login-password" name="login-password" required />
+  
+      <button type="submit">Login</button>
+    </form>
+  </body>
